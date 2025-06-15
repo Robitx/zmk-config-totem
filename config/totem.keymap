@@ -58,6 +58,16 @@
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <13 16 31 20 37 32>;
         };
+
+        combo_l_bootloader {
+            bindings = <&bootloader>;
+            key-positions = <20 10 11 12 13>;
+        };
+
+        combo_r_bootloader {
+            bindings = <&bootloader>;
+            key-positions = <16 17 18 19 31>;
+        };
     };
 
     keymap {
