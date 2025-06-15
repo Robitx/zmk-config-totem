@@ -68,6 +68,16 @@
             bindings = <&bootloader>;
             key-positions = <16 17 18 19 31>;
         };
+
+        combo_l_sys_reset {
+            bindings = <&sys_reset>;
+            key-positions = <0 1 2 3 4>;
+        };
+
+        combo_r_sys_reset {
+            bindings = <&sys_reset>;
+            key-positions = <5 6 7 8 9>;
+        };
     };
 
     keymap {
