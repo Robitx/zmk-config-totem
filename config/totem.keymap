@@ -30,6 +30,12 @@
     tapping-term-ms = <170>;
 };
 
+&mmv {
+    acceleration-exponent = <2>;
+    time-to-max-speed-ms = <600>;
+    delay-ms = <0>;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -91,7 +97,7 @@
 
         l-mod {
             bindings = <
-             &trans          &trans      &trans      &trans        &out OUT_TOG    &trans  &trans  &trans  &trans  &trans
+             &trans          &trans      &trans      &kp TAB       &out OUT_TOG    &trans  &trans  &trans  &trans  &trans
              &kp LMETA       &kp LALT    &kp LCTRL   &kp LSHFT     &trans          &trans  &trans  &trans  &trans  &trans
 &bootloader  &bt BT_CLR_ALL  &bt BT_CLR  &bt BT_NXT  &bt BT_SEL 0  &sys_reset      &trans  &trans  &trans  &trans  &trans  &trans
                                          &trans      &trans        &trans          &trans  &trans  &trans
@@ -100,7 +106,7 @@
 
         r-mod {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &out OUT_TOG  &trans        &trans      &trans      &trans
+        &trans  &trans  &trans  &trans  &trans    &out OUT_TOG  &kp TAB       &trans      &trans      &trans
         &trans  &trans  &trans  &trans  &trans    &trans        &kp RSHIFT    &kp RCTRL   &kp RALT    &kp RMETA
 &trans  &trans  &trans  &trans  &trans  &trans    &sys_reset    &bt BT_SEL 0  &bt BT_NXT  &bt BT_CLR  &bt BT_CLR_ALL  &bootloader
                         &trans  &trans  &trans    &trans        &trans        &trans
@@ -109,10 +115,10 @@
 
         nav {
             bindings = <
-        &trans     &trans    &trans     &kp PRINTSCREEN  &kp C_VOLUME_UP      &kp K_CUT  &kp K_COPY      &kp K_PASTE     &kp DEL       &kp BACKSPACE
-        &kp LMETA  &kp LALT  &kp LCTRL  &kp LSHIFT       &kp K_MUTE           &kp HOME   &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT
-&trans  &trans     &trans    &trans     &trans           &kp C_VOLUME_DOWN    &kp END    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp ENTER
-                             &trans     &trans           &kp SPACE            &mkp LCLK  &mkp RCLK       &mkp MCLK
+        &trans     &trans    &kp PRINTSCREEN  &kp TAB     &kp C_VOLUME_UP      &kp K_CUT  &kp K_COPY      &kp K_PASTE     &kp DEL       &kp BACKSPACE
+        &kp LMETA  &kp LALT  &kp LCTRL        &kp LSHIFT  &kp K_MUTE           &kp HOME   &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT
+&trans  &trans     &trans    &trans           &trans      &kp C_VOLUME_DOWN    &kp END    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp ENTER
+                             &trans           &trans      &kp SPACE            &mkp LCLK  &mkp RCLK       &mkp MCLK
             >;
         };
     };
