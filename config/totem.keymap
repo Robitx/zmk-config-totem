@@ -34,15 +34,11 @@
 };
 
 &mmv {
-    time-to-max-speed-ms = <650>;
     delay-ms = <0>;
     acceleration-exponent = <2>;
 };
 
-&msc {
-    delay-ms = <0>;
-    time-to-max-speed-ms = <650>;
-};
+&msc { delay-ms = <0>; };
 
 / {
     combos {
@@ -123,10 +119,10 @@
 
         nav {
             bindings = <
-        &trans     &trans    &kp PRINTSCREEN  &kp TAB     &kp C_VOLUME_UP      &kp K_CUT  &kp K_COPY      &kp K_PASTE     &kp DEL       &kp BACKSPACE
-        &kp LMETA  &kp LALT  &kp LCTRL        &kp LSHIFT  &kp K_MUTE           &kp HOME   &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT
-&trans  &trans     &trans    &trans           &trans      &kp C_VOLUME_DOWN    &kp END    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp ENTER
-                             &trans           &trans      &kp SPACE            &mkp LCLK  &mkp RCLK       &mkp MCLK
+        &trans     &trans    &kp PRINTSCREEN  &kp TAB     &kp C_VOLUME_UP      &kp K_CUT    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT
+        &kp LMETA  &kp LALT  &kp LCTRL        &kp LSHIFT  &kp K_MUTE           &kp K_COPY   &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT
+&trans  &trans     &trans    &trans           &trans      &kp C_VOLUME_DOWN    &kp K_PASTE  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp ENTER
+                             &kp HOME         &kp END     &kp SPACE            &mkp LCLK    &mkp RCLK       &mkp MCLK
             >;
         };
     };
