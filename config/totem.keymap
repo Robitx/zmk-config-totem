@@ -121,10 +121,10 @@
 
         num {
             bindings = <
-           &kp N1     &kp N2    &kp N3     &kp N4     &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
-           &kp LMETA  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &trans  &kp N4  &kp N5  &kp N6  &trans
-&kp GRAVE  &trans     &trans    &trans     &trans     &trans    &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
-                                &trans     &trans     &trans    &trans  &trans  &trans
+           &kp N1     &kp N2    &kp N3     &kp N4         &kp N5              &kp N6                &kp N7  &kp N8  &kp N9  &kp N0
+           &kp LMETA  &kp LALT  &kp LCTRL  &kp LSHFT      &kp LEFT_BRACKET    &kp RIGHT_BRACKET     &kp N4  &kp N5  &kp N6  &kp MINUS
+&kp GRAVE  &kp COMMA  &kp DOT   &kp SLASH  &kp SEMICOLON  &kp APOSTROPHE      &kp NON_US_BACKSLASH  &kp N1  &kp N2  &kp N3  &kp EQUAL  &kp ENTER
+                                &trans     &kp LSHFT      &kp SPACE           &trans                &trans  &trans
             >;
         };
 
