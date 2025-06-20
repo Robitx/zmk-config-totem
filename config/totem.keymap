@@ -45,46 +45,6 @@
             bindings = <&tog 0>;
         };
 
-        combo_bt_nxt {
-            bindings = <&bt BT_NXT>;
-            key-positions = <20 31>;
-        };
-
-        combo_bt_clr {
-            bindings = <&bt BT_CLR>;
-            key-positions = <20 31 37 32>;
-        };
-
-        combo_bt_clr_all {
-            bindings = <&bt BT_CLR_ALL>;
-            key-positions = <13 16 31 20 37 32>;
-        };
-
-        combo_l_bootloader {
-            bindings = <&bootloader>;
-            key-positions = <20 10 11 12 13>;
-        };
-
-        combo_r_bootloader {
-            bindings = <&bootloader>;
-            key-positions = <16 17 18 19 31>;
-        };
-
-        combo_l_sys_reset {
-            bindings = <&sys_reset>;
-            key-positions = <0 1 2 3 4>;
-        };
-
-        combo_r_sys_reset {
-            bindings = <&sys_reset>;
-            key-positions = <5 6 7 8 9>;
-        };
-
-        combo_bt_sel_0 {
-            bindings = <&bt BT_SEL 0>;
-            key-positions = <20 31 0>;
-        };
-
         combo_tab {
             bindings = <&kp TAB>;
             key-positions = <8 9>;
@@ -130,19 +90,19 @@
 
         l-mod {
             bindings = <
-        &trans     &trans    &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans
-        &kp LMETA  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans    &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                             &trans     &trans     &trans    &trans  &trans  &trans
+             &trans          &trans      &trans      &trans        &trans        &trans  &trans  &trans  &trans  &trans
+             &kp LMETA       &kp LALT    &kp LCTRL   &kp LSHFT     &trans        &trans  &trans  &trans  &trans  &trans
+&bootloader  &bt BT_CLR_ALL  &bt BT_CLR  &bt BT_NXT  &bt BT_SEL 0  &sys_reset    &trans  &trans  &trans  &trans  &trans  &trans
+                                         &trans      &trans        &trans        &trans  &trans  &trans
             >;
         };
 
         r-mod {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans     &trans    &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &kp RSHIFT  &kp RCTRL  &kp RALT  &kp RMETA
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans     &trans    &trans     &trans
-                        &trans  &trans  &trans    &trans  &trans      &trans
+        &trans  &trans  &trans  &trans  &trans    &trans      &trans        &trans      &trans      &trans
+        &trans  &trans  &trans  &trans  &trans    &trans      &kp RSHIFT    &kp RCTRL   &kp RALT    &kp RMETA
+&trans  &trans  &trans  &trans  &trans  &trans    &sys_reset  &bt BT_SEL 0  &bt BT_NXT  &bt BT_CLR  &bt BT_CLR_ALL  &bootloader
+                        &trans  &trans  &trans    &trans      &trans        &trans
             >;
         };
 
