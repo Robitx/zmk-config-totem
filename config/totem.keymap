@@ -41,6 +41,11 @@
 
 &msc { delay-ms = <0>; };
 
+&sk {
+    lazy;
+    quick-release;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -77,8 +82,17 @@
             bindings = <
         &kp Q  &kp W  &kp F      &kp P  &kp B        &kp J       &kp L  &kp U       &kp Y    &kp SEMICOLON
         &kp A  &kp R  &kp S      &kp T  &kp G        &kp M       &kp N  &kp E       &kp I    &kp O
-&tog 5  &kp Z  &kp X  &kp C      &kp D  &kp V        &kp K       &kp H  &kp COMMA   &kp DOT  &kp FSLH       &kp ENTER
-                      &lt 3 DEL  &mo 1  &kp SPACE    &kp LSHIFT  &mo 2  &lt 4 BSPC
+&tog 4  &kp Z  &kp X  &kp C      &kp D  &kp V        &kp K       &kp H  &kp COMMA   &kp DOT  &kp FSLH       &kp ENTER
+                      &lt 3 DEL  &mo 2  &kp SPACE    &kp LSHIFT  &mo 1  &lt 3 BSPC
+            >;
+        };
+
+        num {
+            bindings = <
+           &kp N1     &kp N2    &kp N3     &kp N4         &kp N5              &kp N6                &kp N7  &kp N8  &kp N9  &kp N0
+           &sk LMETA  &sk LALT  &sk LCTRL  &sk LSHFT      &kp LEFT_BRACKET    &kp RIGHT_BRACKET     &trans  &trans  &trans  &kp MINUS
+&kp GRAVE  &kp COMMA  &kp DOT   &kp SLASH  &kp SEMICOLON  &kp APOSTROPHE      &kp NON_US_BACKSLASH  &trans  &trans  &trans  &kp EQUAL  &kp ENTER
+                                &trans     &trans         &kp SPACE           &kp LSHIFT            &trans  &trans
             >;
         };
 
@@ -91,30 +105,12 @@
             >;
         };
 
-        num {
-            bindings = <
-           &kp N1     &kp N2    &kp N3     &kp N4         &kp N5              &kp N6                &kp N7  &kp N8  &kp N9  &kp N0
-           &kp LMETA  &kp LALT  &kp LCTRL  &kp LSHFT      &kp LEFT_BRACKET    &kp RIGHT_BRACKET     &kp N4  &kp N5  &kp N6  &kp MINUS
-&kp GRAVE  &kp COMMA  &kp DOT   &kp SLASH  &kp SEMICOLON  &kp APOSTROPHE      &kp NON_US_BACKSLASH  &kp N1  &kp N2  &kp N3  &kp EQUAL  &kp ENTER
-                                &trans     &kp LSHFT      &kp SPACE           &trans                &trans  &trans
-            >;
-        };
-
-        l-mod {
+        fun {
             bindings = <
              &trans          &trans      &trans      &kp TAB       &out OUT_TOG    &trans  &trans  &trans  &trans  &trans
              &kp LMETA       &kp LALT    &kp LCTRL   &kp LSHFT     &trans          &trans  &trans  &trans  &trans  &trans
 &bootloader  &bt BT_CLR_ALL  &bt BT_CLR  &bt BT_NXT  &bt BT_SEL 0  &sys_reset      &trans  &trans  &trans  &trans  &trans  &trans
                                          &trans      &trans        &trans          &trans  &trans  &trans
-            >;
-        };
-
-        r-mod {
-            bindings = <
-        &trans  &trans  &trans  &trans  &trans    &out OUT_TOG  &kp TAB       &trans      &trans      &trans
-        &trans  &trans  &trans  &trans  &trans    &trans        &kp RSHIFT    &kp RCTRL   &kp RALT    &kp RMETA
-&trans  &trans  &trans  &trans  &trans  &trans    &sys_reset    &bt BT_SEL 0  &bt BT_NXT  &bt BT_CLR  &bt BT_CLR_ALL  &bootloader
-                        &trans  &trans  &trans    &trans        &trans        &trans
             >;
         };
 
